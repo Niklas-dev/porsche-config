@@ -11,8 +11,10 @@ export default function NavBar() {
         width={500}
         height={500}
       />
-      <div className="flex flex-row items-center">
-        <button className="h-12 w-32 bg-[#10141A] rounded-full">Test</button>
+      <div className="flex flex-row items-center gap-2">
+        <button className="h-12 w-32 bg-[#10141A] text-[#F5F5F5] rounded-full">
+          Test
+        </button>
         <button className="h-12 w-32 text-[#10141A] bg-transparent rounded-full font-medium">
           Test
         </button>
@@ -24,14 +26,14 @@ export default function NavBar() {
         </button>
       </div>
 
-      <div className="flex flex-row items-center">
-        <button className="h-12 w-12 text-[#10141A] bg-white rounded-full font-medium">
+      <div className="flex flex-row items-center gap-2">
+        <button className="h-12 w-12 text-[#10141A] bg-[#F5F5F5] rounded-full font-medium">
           I
         </button>
-        <button className="h-12 w-32 text-[#10141A] bg-transparent rounded-full font-medium">
+        <button className="h-12 w-32 text-[#F5F5F5] bg-[#10141A] rounded-full font-medium">
           Test
         </button>
-        <button className="h-12 w-12 text-[#10141A] bg-white rounded-full font-medium">
+        <button className="h-12 w-12 text-[#10141A] bg-[#F5F5F5] rounded-full font-medium">
           I
         </button>
       </div>
