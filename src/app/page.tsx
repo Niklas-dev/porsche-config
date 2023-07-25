@@ -6,6 +6,7 @@ export default function Home() {
     <main className="w-screen h-screen bg-[#E4E4E4] flex flex-col">
       <NavBar />
       <Image
+        className=""
         src={"/iris-removebg.png"}
         alt="Porsche"
         width={1000}

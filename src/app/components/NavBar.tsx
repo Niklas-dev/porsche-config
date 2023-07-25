@@ -33,7 +33,7 @@ export default function NavBar() {
         <button className="h-12 w-32 text-[#F5F5F5] bg-[#10141A] rounded-full font-medium">
           Test
         </button>
-        <button className="h-12 w-12 text-[#10141A] bg-[#F5F5F5] rounded-full font-medium">
+        <button className="h-12 w-12 text-[#10141A] bg-[#F5F5F5] rounded-full font-medium flex justify-center items-center">
           I
         </button>
       </div>

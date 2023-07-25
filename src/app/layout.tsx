@@ -1,8 +1,13 @@
 import "../styles/globals.css";
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
+import { Noto_Sans } from "next/font/google";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
+const noto = Noto_Sans({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
