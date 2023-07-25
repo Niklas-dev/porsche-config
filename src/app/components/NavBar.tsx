@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-
+import { Settings, Layout } from "react-feather";
 export default function NavBar() {
   return (
     <div className="flex flex-row justify-between items-center h-20 bg-transparent px-10">
@@ -13,27 +13,32 @@ export default function NavBar() {
       />
       <div className="flex flex-row items-center gap-2">
         <button className="h-12 w-32 bg-[#10141A] text-[#F5F5F5] rounded-full font-medium">
-          Test
+          Models
         </button>
         <button className="h-12 w-32 text-[#10141A] bg-transparent rounded-full font-medium">
-          Test
+          Services
         </button>
         <button className="h-12 w-32 text-[#10141A] bg-transparent rounded-full font-medium">
-          Test
+          Experience
         </button>
         <button className="h-12 w-32 text-[#10141A] bg-transparent rounded-full font-medium">
-          Test
+          Shop
+        </button>
+        <button className="h-12 w-32 text-[#10141A] bg-transparent rounded-full font-medium">
+          Purchase
         </button>
       </div>
 
       <div className="flex flex-row items-center gap-2">
-        <button className="h-12 w-12 text-[#10141A] bg-[#F5F5F5] rounded-full font-medium">
-          I
+        <button className="h-12 w-12 text-[#10141A] bg-[#F5F5F5] rounded-full flex justify-center items-center">
+          <Layout color="#353535" />
         </button>
         <button className="h-12 w-32 text-[#F5F5F5] bg-[#10141A] rounded-full font-medium">
           Test
         </button>
-        <button className="h-12 w-12 text-[#10141A] bg-[#F5F5F5] rounded-full font-medium flex justify-center items-center"></button>
+        <button className="h-12 w-12 text-[#10141A] bg-[#F5F5F5] rounded-full  flex justify-center items-center">
+          <Settings color="#353535" />
+        </button>
       </div>
     </div>
   );
