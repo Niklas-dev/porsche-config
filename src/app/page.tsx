@@ -6,6 +6,7 @@ import {
   ChevronRight,
   ChevronLeft,
 } from "react-feather";
+import InfoBar from "./components/InfoBar";
 export default function Home() {
   return (
     <main className="w-screen h-screen bg-[#E4E4E4] flex flex-col">
@@ -14,7 +15,7 @@ export default function Home() {
         <div className="absolute w-full top-1 left-0 text-black px-10 flex flex-row justify-between gap-4">
           <div className="flex flex-row">
             <div className="flex flex-col gap-2">
-              <h2 className="text-5xl font-semibold">Tagra-4</h2>
+              <h2 className="text-5xl font-semibold">Turbo S</h2>
               <p className="text-lg">911 Carrera - Personal Edition</p>
             </div>
             <div>
@@ -27,7 +28,7 @@ export default function Home() {
             <div className="flex flex-col gap-2">
               <div className="flex flex-row gap-2 items-end">
                 <span className="text-2xl">$</span>
-                <span className="text-5xl font-semibold">276.000</span>
+                <span className="text-5xl font-semibold">246.000</span>
               </div>
               <p className="text-lg">+ 54.350 accessories</p>
             </div>
@@ -85,6 +86,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <InfoBar />
     </main>
   );
 }
