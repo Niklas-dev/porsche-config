@@ -12,28 +12,28 @@ export default function NavBar() {
         height={500}
       />
       <div className="flex flex-row items-center gap-2">
-        <button className="h-12 w-32 bg-[#10141A] text-[#F5F5F5] rounded-full font-medium">
+        <button className="h-12 w-32 text-[#F5F5F5] bg-[#10141A] hover:bg-[#202020] duration-300 transition-colors rounded-full font-medium">
           Models
         </button>
-        <button className="h-12 w-32 text-[#10141A] bg-transparent rounded-full font-medium">
+        <button className="h-12 w-32 text-[#10141A] bg-transparent hover:bg-[#d8d8d8] duration-300 transition-colors rounded-full font-medium">
           Services
         </button>
-        <button className="h-12 w-32 text-[#10141A] bg-transparent rounded-full font-medium">
+        <button className="h-12 w-32 text-[#10141A] bg-transparent hover:bg-[#d8d8d8] duration-300 transition-colors rounded-full font-medium">
           Experience
         </button>
-        <button className="h-12 w-32 text-[#10141A] bg-transparent rounded-full font-medium">
+        <button className="h-12 w-32 text-[#10141A] bg-transparent hover:bg-[#d8d8d8] duration-300 transition-colors rounded-full font-medium">
           Shop
         </button>
-        <button className="h-12 w-32 text-[#10141A] bg-transparent rounded-full font-medium">
+        <button className="h-12 w-32 text-[#10141A] bg-transparent hover:bg-[#d8d8d8] duration-300 transition-colors rounded-full font-medium">
           Purchase
         </button>
       </div>
 
-      <div className="flex flex-row items-center gap-2">
+      <div className="flex flex-row items-center gap-4">
         <button className="h-12 w-12 text-[#10141A] bg-[#F5F5F5] rounded-full flex justify-center items-center">
           <Layout color="#353535" />
         </button>
-        <button className="h-12 w-32 text-[#F5F5F5] bg-[#10141A] rounded-full font-medium">
+        <button className="h-12 w-32 text-[#F5F5F5] bg-[#10141A] hover:bg-[#202020] duration-300 transition-colors rounded-full font-medium">
           Test
         </button>
         <button className="h-12 w-12 text-[#10141A] bg-[#F5F5F5] rounded-full  flex justify-center items-center">
