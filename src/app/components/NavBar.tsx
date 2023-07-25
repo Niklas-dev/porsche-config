@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { Settings, Layout } from "react-feather";
+import { Settings, Layout, Send } from "react-feather";
 export default function NavBar() {
   return (
     <div className="flex flex-row justify-between items-center h-20 bg-transparent px-10">
@@ -30,13 +30,14 @@ export default function NavBar() {
       </div>
 
       <div className="flex flex-row items-center gap-4">
-        <button className="h-12 w-12 text-[#10141A] bg-[#F5F5F5] rounded-full flex justify-center items-center">
+        <button className="h-12 w-12 text-[#10141A] bg-[#F5F5F5] hover:bg-[#d8d8d8] duration-300 transition-colors rounded-full flex justify-center items-center">
           <Layout color="#353535" />
         </button>
-        <button className="h-12 w-32 text-[#F5F5F5] bg-[#10141A] hover:bg-[#202020] duration-300 transition-colors rounded-full font-medium">
-          Test
+        <button className="h-12 w-56 text-[#F5F5F5] bg-[#10141A] hover:bg-[#202020] duration-300 transition-colors rounded-full font-medium flex flex-row items-center justify-center gap-4">
+          <Send size={18} color="#F5F5F5" />
+          Contact Dealer
         </button>
-        <button className="h-12 w-12 text-[#10141A] bg-[#F5F5F5] rounded-full  flex justify-center items-center">
+        <button className="h-12 w-12 text-[#10141A] bg-[#F5F5F5] hover:bg-[#d8d8d8] duration-300 transition-colors rounded-full  flex justify-center items-center">
           <Settings color="#353535" />
         </button>
       </div>
