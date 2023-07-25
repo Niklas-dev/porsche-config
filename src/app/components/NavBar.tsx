@@ -12,7 +12,7 @@ export default function NavBar() {
         height={500}
       />
       <div className="flex flex-row items-center gap-2">
-        <button className="h-12 w-32 bg-[#10141A] text-[#F5F5F5] rounded-full">
+        <button className="h-12 w-32 bg-[#10141A] text-[#F5F5F5] rounded-full font-medium">
           Test
         </button>
         <button className="h-12 w-32 text-[#10141A] bg-transparent rounded-full font-medium">
