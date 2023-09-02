@@ -5,11 +5,18 @@ import {
   Settings,
   ChevronRight,
   ChevronLeft,
+  Speaker,
+  Map,
+  Tool,
+  Aperture,
+  PieChart,
+  Edit,
+  Key,
 } from "react-feather";
 import InfoBar from "./components/InfoBar";
 export default function Home() {
   return (
-    <main className="w-screen h-screen bg-[#E4E4E4] flex flex-col">
+    <main className="w-screen h-fit bg-[#E4E4E4] flex flex-col ">
       <NavBar />
       <div className="flex flex-row justify-center items-center relative mt-16 ">
         <div className="absolute w-full top-1 left-0 text-black px-10 flex flex-row justify-between gap-4">
@@ -38,30 +45,30 @@ export default function Home() {
         <div className="absolute text-black px-10 w-full flex flex-row justify-between">
           <div className="flex flex-col gap-2">
             <button className="h-12 w-12 text-[#10141A] bg-[#ececec] hover:bg-[#d8d8d8] duration-300 transition-colors rounded-full flex justify-center items-center">
-              <Settings color="#353535" />
+              <Key color="#353535" />
             </button>
             <button className="h-12 w-12 text-[#10141A] bg-[#ececec] hover:bg-[#d8d8d8] duration-300 transition-colors rounded-full flex justify-center items-center">
-              <Settings color="#353535" />
+              <Edit color="#353535" />
             </button>
             <button className="h-12 w-12 text-[#10141A] bg-[#ececec] hover:bg-[#d8d8d8] duration-300 transition-colors rounded-full flex justify-center items-center">
-              <Settings color="#353535" />
+              <PieChart color="#353535" />
             </button>
             <button className="h-12 w-12 text-[#10141A] bg-[#ececec] hover:bg-[#d8d8d8] duration-300 transition-colors rounded-full flex justify-center items-center">
-              <Settings color="#353535" />
+              <Aperture color="#353535" />
             </button>
           </div>
           <div className="flex flex-col gap-2">
             <button className="h-12 w-12 text-[#10141A] bg-[#ececec] hover:bg-[#d8d8d8] duration-300 transition-colors rounded-full flex justify-center items-center">
-              <Settings color="#353535" />
+              <Tool color="#353535" />
             </button>
             <button className="h-12 w-12 text-[#F5F5F5] bg-[#10141A] hover:bg-[#d8d8d8] duration-300 transition-colors rounded-full flex justify-center items-center">
               <Settings color="#F5F5F5" />
             </button>
             <button className="h-12 w-12 text-[#10141A] bg-[#ececec] hover:bg-[#d8d8d8] duration-300 transition-colors rounded-full flex justify-center items-center">
-              <Settings color="#353535" />
+              <Map color="#353535" />
             </button>
             <button className="h-12 w-12 text-[#10141A] bg-[#ececec] hover:bg-[#d8d8d8] duration-300 transition-colors rounded-full flex justify-center items-center">
-              <Settings color="#353535" />
+              <Speaker color="#353535" />
             </button>
           </div>
         </div>
@@ -79,12 +86,39 @@ export default function Home() {
         </div>
 
         <div className="absolute w-full flex-row flex justify-center -top-6">
-          <div className="w-24 h-12 px-2 bg-[#F5F5F5] flex flex-row items-center justify-between rounded-full">
-            <ChevronLeft color="#353535" />
+          <div className="w-24 h-12 px-2 bg-[#f0f0f0] flex flex-row items-center justify-between rounded-full cursor-move">
+            <ChevronLeft
+              className="hover:scale-110 transition-transform cursor-pointer"
+              color="#353535"
+            />
 
-            <ChevronRight color="#353535" />
+            <ChevronRight
+              className="hover:scale-110 transition-transform cursor-pointer"
+              color="#353535"
+            />
           </div>
         </div>
+      </div>
+      <div className="w-full h-10 flex flex-col justify-center items-center  mt-16 gap-1">
+        <div className="bg-[#cccccc] w-12 h-[2px]"></div>
+        <div className="bg-[#cccccc] w-20 h-[2px]"></div>
+      </div>
+      <div className="h-80 flex flex-row justify-center gap-6 mt-0">
+        <div className="h-full w-[30rem] bg-[#ececec] rounded-3xl mt-10">
+          <h3>Wheel Type</h3>
+        </div>
+        <div className="h-full w-[30rem] bg-[#f5f5f5] rounded-3xl p-6 text-[#10141A] font-semibold relative">
+          <h3>Wheel Type</h3>
+          <div className="flex flex-row items-center absolute right-2 top-2 gap-1">
+            <div className="h-12 w-fit px-6 text-[#10141A] bg-transparent rounded-full flex justify-center items-center font-medium border border-[#d1d1d1]">
+              $3.304
+            </div>
+            <button className="h-12 w-12 text-[#10141A] bg-[#fdfdfd] hover:bg-[#d8d8d8] duration-300 transition-colors rounded-full flex justify-center items-center">
+              <Settings color="#353535" />
+            </button>
+          </div>
+        </div>
+        <div className="h-full w-[30rem] bg-[#ececec] rounded-3xl mt-10"></div>
       </div>
       <InfoBar />
     </main>
