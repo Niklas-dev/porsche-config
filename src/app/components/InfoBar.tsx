@@ -5,7 +5,7 @@ export default function InfoBar() {
   const [show, setShow] = useState(true);
   return (
     <div
-      className={`absolute h-32 bottom-0 w-full bg-[#F5F5F5] text-black py-2 px-4 ${
+      className={`fixed h-fit bottom-0 w-full bg-[#F5F5F5] text-black py-2 px-4 ${
         !show && "hidden"
       }`}
     >
@@ -28,7 +28,8 @@ export default function InfoBar() {
         >
           @RonDesignLab
         </a>
-        .
+        . <br /> Informations and pictures are fictional and don&apos;t meet any
+        real conditions.
       </p>
       <div className="flex flex-row justify-center">
         <button
