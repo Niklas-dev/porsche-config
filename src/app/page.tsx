@@ -1,77 +1,24 @@
 import Image from "next/image";
 import NavBar from "./components/NavBar";
-import {
-  ChevronDown,
-  Settings,
-  ChevronRight,
-  ChevronLeft,
-  Speaker,
-  Map,
-  Tool,
-  Aperture,
-  PieChart,
-  Edit,
-  Key,
-  Check,
-} from "react-feather";
 import InfoBar from "./components/InfoBar";
+import BodySelect from "./components/BodySelect";
+import WheelSelect from "./components/WheelSelect";
+import EngineSelect from "./components/EngineSelect";
+import LeftOptions from "./components/LeftOptions";
+import RightOptions from "./components/RightOptions";
+import ModelInformations from "./components/ModelInformations";
+import CarSlider from "./components/CarSlider";
+
 export default function Home() {
   return (
     <main className="w-screen h-fit bg-[#E4E4E4] flex flex-col pb-20">
       <NavBar />
       <div className="flex flex-row justify-center items-center relative mt-16 ">
-        <div className="absolute w-full top-1 left-0 text-black px-10 flex flex-row justify-between gap-4">
-          <div className="flex flex-row">
-            <div className="flex flex-col gap-2">
-              <h2 className="text-5xl font-semibold">Turbo S</h2>
-              <p className="text-lg">911 Carrera - Personal Edition</p>
-            </div>
-            <div>
-              <button className="h-12 w-12 text-[#10141A] bg-[#F5F5F5] hover:bg-[#d8d8d8] duration-300 transition-colors rounded-full flex justify-center items-center">
-                <ChevronDown color="#353535" />
-              </button>
-            </div>
-          </div>
-          <div className="flex flex-row">
-            <div className="flex flex-col gap-2">
-              <div className="flex flex-row gap-2 items-end">
-                <span className="text-2xl">$</span>
-                <span className="text-5xl font-semibold">246.000</span>
-              </div>
-              <p className="text-lg">+ 54.350 accessories</p>
-            </div>
-          </div>
-        </div>
+        <ModelInformations />
 
         <div className="absolute text-black px-10 w-full flex flex-row justify-between">
-          <div className="flex flex-col gap-2">
-            <button className="h-12 w-12 text-[#10141A] bg-[#ececec] hover:bg-[#d8d8d8] duration-300 transition-colors rounded-full flex justify-center items-center">
-              <Key color="#353535" />
-            </button>
-            <button className="h-12 w-12 text-[#10141A] bg-[#ececec] hover:bg-[#d8d8d8] duration-300 transition-colors rounded-full flex justify-center items-center">
-              <Edit color="#353535" />
-            </button>
-            <button className="h-12 w-12 text-[#10141A] bg-[#ececec] hover:bg-[#d8d8d8] duration-300 transition-colors rounded-full flex justify-center items-center">
-              <PieChart color="#353535" />
-            </button>
-            <button className="h-12 w-12 text-[#10141A] bg-[#ececec] hover:bg-[#d8d8d8] duration-300 transition-colors rounded-full flex justify-center items-center">
-              <Aperture color="#353535" />
-            </button>
-          </div>
-          <div className="flex flex-col gap-2">
-            <button className="h-12 w-12 text-[#10141A] bg-[#ececec] hover:bg-[#d8d8d8] duration-300 transition-colors rounded-full flex justify-center items-center">
-              <Tool color="#353535" />
-            </button>
-            <button className="h-12 w-12 text-[#F5F5F5] bg-[#10141A] hover:bg-[#d8d8d8] duration-300 transition-colors rounded-full flex justify-center items-center">
-              <Settings color="#F5F5F5" />
-            </button>
-            <button className="h-12 w-12 text-[#10141A] bg-[#ececec] hover:bg-[#d8d8d8] duration-300 transition-colors rounded-full flex justify-center items-center">
-              <Map color="#353535" />
-            </button>
-            <button className="h-12 w-12 text-[#10141A] bg-[#ececec] hover:bg-[#d8d8d8] duration-300 transition-colors rounded-full flex justify-center items-center">
-              <Speaker color="#353535" />
-            </button>
-          </div>
+          <LeftOptions />
+          <RightOptions />
         </div>
         <Image
           className=""
@@ -81,165 +28,15 @@ export default function Home() {
           height={1100}
         />
       </div>
-      <div className="text-black flex flex-col items-center relative">
-        <div className="absolute w-full flex-row flex justify-center -top-24">
-          <div className="w-1/2 h-[1px] box2 "></div>
-        </div>
-
-        <div className="absolute w-full flex-row flex justify-center -top-6">
-          <div className="w-24 h-12 px-2 bg-[#f0f0f0] flex flex-row items-center justify-between rounded-full cursor-move">
-            <ChevronLeft
-              className="hover:scale-110 transition-transform cursor-pointer"
-              color="#353535"
-            />
-
-            <ChevronRight
-              className="hover:scale-110 transition-transform cursor-pointer"
-              color="#353535"
-            />
-          </div>
-        </div>
-      </div>
+      <CarSlider />
       <div className="w-full h-10 flex flex-col justify-center items-center  mt-16 gap-1">
         <div className="bg-[#cccccc] w-12 h-[2px]"></div>
         <div className="bg-[#cccccc] w-20 h-[2px]"></div>
       </div>
       <div className="h-80 flex flex-row justify-center gap-6 mt-0">
-        <div className="h-full w-[32rem] bg-[#f5f5f5] rounded-3xl p-6 text-[#10141A] font-semibold relative mt-10">
-          <h3>Car Body</h3>
-          <div className="flex flex-row items-center absolute right-2 top-2 gap-1">
-            <div className="h-12 w-fit px-6 text-[#10141A] bg-transparent rounded-full flex justify-center items-center font-medium border border-[#d1d1d1]">
-              $8.104
-            </div>
-            <button className="h-12 w-12 text-[#10141A] bg-[#fdfdfd] hover:bg-[#d8d8d8] duration-300 transition-colors rounded-full flex justify-center items-center">
-              <Settings color="#353535" />
-            </button>
-          </div>
-          <div className="flex flex-row items-baseline justify-center mt-24 gap-4 ">
-            <div className="flex flex-col justify-center items-center relative cursor-pointer opacity-70 hover:opacity-100 transition-opacity">
-              <Image
-                className=""
-                src={"/porsche_body.png"}
-                alt="Porsche"
-                width={150}
-                height={150}
-              />
-              <p className="text-center flex-wrap">Turbo S</p>
-            </div>
-            <div className="flex flex-col justify-center items-center relative cursor-pointer">
-              <Image
-                className=""
-                src={"/porsche_body.png"}
-                alt="Porsche"
-                width={300}
-                height={300}
-              />
-              <p className="text-center flex-wrap">Turbo S</p>
-            </div>
-            <div className="flex flex-col justify-center items-center relative cursor-pointer opacity-70 hover:opacity-100 transition-opacity">
-              <Image
-                className=""
-                src={"/porsche_body.png"}
-                alt="Porsche"
-                width={150}
-                height={150}
-              />
-              <p className="text-center flex-wrap">Turbo S</p>
-            </div>
-          </div>
-        </div>
-        <div className="h-full w-[32rem] bg-[#f5f5f5] rounded-3xl p-6 text-[#10141A] font-semibold relative">
-          <h3>Wheel Type</h3>
-          <div className="flex flex-row items-center absolute right-2 top-2 gap-1">
-            <div className="h-12 w-fit px-6 text-[#10141A] bg-transparent rounded-full flex justify-center items-center font-medium border border-[#d1d1d1]">
-              $3.304
-            </div>
-            <button className="h-12 w-12 text-[#10141A] bg-[#fdfdfd] hover:bg-[#d8d8d8] duration-300 transition-colors rounded-full flex justify-center items-center">
-              <Settings color="#353535" />
-            </button>
-          </div>
-          <div className="flex flex-row items-baseline justify-center mt-12 gap-4 ">
-            <div className="flex flex-col justify-center items-center relative cursor-pointer opacity-70 hover:opacity-100 transition-opacity">
-              <Image
-                className=""
-                src={"/rim1.png"}
-                alt="Porsche"
-                width={110}
-                height={110}
-              />
-              <p className="text-center flex-wrap">Zoll Carrera Classic</p>
-            </div>
-            <div className="flex flex-col justify-center items-center relative cursor-pointer">
-              <div className="w-full  flex flex-row justify-center absolute -top-3">
-                <div className="h-12 w-12  bg-[#10141A]  duration-300 transition-colors rounded-full flex justify-center items-center   border-4 border-white">
-                  <Check color="#F5F5F5" />
-                </div>
-              </div>
-              <Image
-                className=""
-                src={"/rim1.png"}
-                alt="Porsche"
-                width={150}
-                height={150}
-              />
-              <p className="text-center flex-wrap">Zoll RS Spyder</p>
-            </div>
-            <div className="flex flex-col justify-center items-center relative cursor-pointer opacity-70 hover:opacity-100 transition-opacity">
-              <Image
-                className=""
-                src={"/rim1.png"}
-                alt="Porsche"
-                width={110}
-                height={110}
-              />
-              <p className="text-center flex-wrap">Zoll Carrera S</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="h-full w-[32rem] bg-[#f5f5f5] rounded-3xl p-6 text-[#10141A] font-semibold relative mt-10">
-          <h3>Engine Setup</h3>
-          <div className="flex flex-row items-center absolute right-2 top-2 gap-1">
-            <div className="h-12 w-fit px-6 text-[#10141A] bg-transparent rounded-full flex justify-center items-center font-medium border border-[#d1d1d1]">
-              $12.304
-            </div>
-            <button className="h-12 w-12 text-[#10141A] bg-[#fdfdfd] hover:bg-[#d8d8d8] duration-300 transition-colors rounded-full flex justify-center items-center">
-              <Settings color="#353535" />
-            </button>
-          </div>
-          <div className="flex flex-row items-baseline justify-center mt-12 gap-4 ">
-            <div className="flex flex-col justify-center items-center relative cursor-pointer opacity-70 hover:opacity-100 transition-opacity">
-              <Image
-                className=""
-                src={"/engine.png"}
-                alt="Porsche"
-                width={150}
-                height={150}
-              />
-              <p className="text-center flex-wrap">Sport</p>
-            </div>
-            <div className="flex flex-col justify-center items-center relative cursor-pointer mt-4">
-              <Image
-                className=""
-                src={"/engine.png"}
-                alt="Porsche"
-                width={300}
-                height={300}
-              />
-              <p className="text-center flex-wrap">Standard</p>
-            </div>
-            <div className="flex flex-col justify-center items-center relative cursor-pointer opacity-70 hover:opacity-100 transition-opacity">
-              <Image
-                className=""
-                src={"/engine.png"}
-                alt="Porsche"
-                width={150}
-                height={150}
-              />
-              <p className="text-center flex-wrap">Premium</p>
-            </div>
-          </div>
-        </div>
+        <BodySelect />
+        <WheelSelect />
+        <EngineSelect />
       </div>
       <InfoBar />
     </main>
